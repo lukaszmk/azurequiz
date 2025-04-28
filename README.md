@@ -51,3 +51,6 @@ This Project is designed to test and imporve your knowlede of Microsoft Azure co
 
 
 
+## Architecture Diagram
+
+![Architecture Diagram](architecture.png)

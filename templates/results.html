@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Results</title>
+    <link href="/static/styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz Results</h1>
+        <p>Your score: {{ score }} out of {{ total }}</p>
+        <p>Percentage of correct answers: {{ "%.2f" % (score / total * 100) }}%</p>
+        <h2>Review</h2>
+        {% for question in questions %}
+        <div class="review">
+            <p><strong>Question {{ question.id }}:</strong> {{ question.text }}</p>
+            <p>Your answer: {{ user_answers[question.id] }}</p>
+            <p>Correct answer: {{ question.correct }}</p>
+            <p class="{{ 'correct' if user_answers[question.id] == question.correct else 'incorrect' }}">
+                {{ 'Correct' if user_answers[question.id] == question.correct else 'Incorrect' }}
+            </p>
+        </div>
+        {% endfor %}
+        <a href="/" class="btn">Restart Quiz</a>
+    </div>
+</body>
+</html>

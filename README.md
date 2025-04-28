@@ -51,6 +51,19 @@ This Project is designed to test and imporve your knowlede of Microsoft Azure co
 
 
 
-## Architecture Diagram
+## Start the APP
 
-![Architecture Diagram](architecture.png)
+- pip install -r requirements.txt
+
+Then activate the Virtual Enviroment
+
+- .\venv\Scripts\activate
+
+After that run the app locally 
+- uvicorn main:app --reload
+
+Check if the APP is working in the browser.
+
+Now the app is ready to uplod it to Azure App Service.
+
+## Deploy APP to Azure

@@ -1,8 +1,17 @@
-<form method="POST" action="/question">
-    <h1>Question {{ qid }} of {{ total_questions }}</h1>
-    <p>{{ question.text }}</p>
-    {% for option in question.options %}
-        <input type="radio" name="answer" value="{{ option }}" required> {{ option }}<br>
-    {% endfor %}
-    <button type="submit">Next</button>
-</form>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Question</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <form method="POST" action="/question">
+        <h1>Question {{ qid }} of {{ total_questions }}</h1>
+        <p>{{ question.text }}</p>
+        {% for option in question.options %}
+            <input type="radio" name="answer" value="{{ option }}" required> {{ option }}<br>
+        {% endfor %}
+        <button type="submit">Next</button>
+    </form>
+</body>
+</html>

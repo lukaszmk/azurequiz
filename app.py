@@ -3,7 +3,6 @@ from fastapi.responses import HTMLResponse, Response
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 import logging
-import os
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)
@@ -32,12 +31,6 @@ questions = [
         "text": "What is the name of Azure's AI service?",
         "options": ["Azure Cognitive Services", "Azure Data Lake", "Azure DevOps", "Azure Kubernetes Service"],
         "correct": "Azure Cognitive Services"
-    },
-    {
-         "id": 4,
-         "text": "Which Azure service is used to manage virtual machines?",
-         "options": ["Azure Virtual Network", "Azure Blob Storage", "Azure Virtual Machines", "Azure Functions"],
-         "correct": "Azure Virtual Machines"
     }
 ]
 
@@ -102,7 +95,3 @@ async def post_answer(request: Request, qid: int, answer: str = Form(...)):
             "questions": questions,
             "user_answers": user_answers
         })
-    
-if __name__ == '__main__':
-    port = int(os.getenv('PORT', 8000))
-    app.run(host='0.0.0.0', port=port, debug=True)

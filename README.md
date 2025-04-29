@@ -67,3 +67,12 @@ Check if the APP is working in the browser.
 Now the app is ready to uplod it to Azure App Service.
 
 ## Deploy APP to Azure
+
+az group create --name AzureQuizRG --location westeurope
+
+az appservice plan create --name AzureQuizPlan --resource-group AzureQuizRG --sku F1 --is-linux
+
+az webapp create --name azurequizapp --resource-group AzureQuizRG --plan AzureQuizPlan --runtime "PYTHON:3.13"
+
+az webapp config set --resource-group AzureQuizRG --name azurequizapp --startup-file "uvicorn main:app --host 0.0.0.0 --port 8000"
+

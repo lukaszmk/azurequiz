@@ -3,6 +3,7 @@ from fastapi.responses import HTMLResponse, Response
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 import logging
+import os
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)
@@ -101,3 +102,7 @@ async def post_answer(request: Request, qid: int, answer: str = Form(...)):
             "questions": questions,
             "user_answers": user_answers
         })
+    
+if __name__ == '__main__':
+    port = int(os.getenv('PORT', 8000))
+    app.run(host='0.0.0.0', port=port, debug=True)

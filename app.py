@@ -31,6 +31,13 @@ questions = [
         "text": "What is the name of Azure's AI service?",
         "options": ["Azure Cognitive Services", "Azure Data Lake", "Azure DevOps", "Azure Kubernetes Service"],
         "correct": "Azure Cognitive Services"
+    },
+    {
+         
+     "id": 2,
+        "text": "Which Azure service is used to store unstructured data?",
+        "options": ["Azure SQL Database", "Azure Blob Storage", "Azure Virtual Machines", "Azure Functions"],
+        "correct": "Azure Blob Storage"
     }
 ]
 

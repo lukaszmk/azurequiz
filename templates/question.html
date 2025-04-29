@@ -1,28 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Question {{ qid }}</title>
-    <link href="/static/styles.css" rel="stylesheet">
-</head>
-<body>
-    <div class="container">
-        <h2>Question {{ qid }} of {{ total_questions }}</h2>
-        <p>{{ question.text }}</p>
-        <form method="post" action="/question/{{ qid }}">
-            {% for option in question.options %}
-            <label>
-                <input type="radio" name="answer" value="{{ option }}" required>
-                {{ option }}
-            </label><br>
-            {% endfor %}
-            <button type="submit" class="btn">
-                {% if qid == total_questions %}
-                    Submit
-                {% else %}
-                    Next Question
-                {% endif %}
-            </button>
-        </form>
-    </div>
-</body>
-</html>
+<form method="POST" action="/question">
+    <h1>Question {{ qid }} of {{ total_questions }}</h1>
+    <p>{{ question.text }}</p>
+    {% for option in question.options %}
+        <input type="radio" name="answer" value="{{ option }}" required> {{ option }}<br>
+    {% endfor %}
+    <button type="submit">Next</button>
+</form>

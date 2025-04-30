@@ -57,10 +57,12 @@ This Project is designed to test and imporve your knowlede of Microsoft Azure co
 
 Then activate the Virtual Enviroment
 
+- python -m venv venv
+
 - .\venv\Scripts\activate
 
 After that run the app locally 
-- uvicorn main:app --reload
+- uvicorn app:app --reload
 
 Check if the APP is working in the browser.
 

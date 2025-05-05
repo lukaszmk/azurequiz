@@ -45,7 +45,7 @@ questions = [
         "text": "Which Azure service is used to implement Role-Based Access Control (RBAC) for managing access to Azure resources?",
         "options": ["Azure Active Directory", "Azure Key Vault", "Azure Policy", "Azure Monitor"],
         "correct": "Azure Active Directory"
-}
+    },
 
     {
         "id": 6,

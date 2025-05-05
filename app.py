@@ -39,7 +39,14 @@ questions = [
         "text": "Which Azure service is used to store unstructured data?",
         "options": ["Azure SQL Database", "Azure Blob Storage", "Azure Virtual Machines", "Azure Functions"],
         "correct": "Azure Blob Storage"
-    }
+    },
+    {
+        "id": 5,
+        "text": "Which Azure service is used to implement Role-Based Access Control (RBAC) for managing access to Azure resources?",
+        "options": ["Azure Active Directory", "Azure Key Vault", "Azure Policy", "Azure Monitor"],
+        "correct": "Azure Active Directory"
+}
+    
 ]
 
 # Server-side storage for user sessions and answers

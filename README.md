@@ -57,19 +57,22 @@ This Project is designed to test and imporve your knowlede of Microsoft Azure co
 
 Then activate the Virtual Enviroment
 
+```bash
 - python -m venv venv
-
+```
+```bash
 - .\venv\Scripts\activate
-
+```
 After that run the app locally 
+```bash
 - uvicorn app:app --reload
-
+```
 Check if the APP is working in the browser.
 
 Now the app is ready to uplod it to Azure App Service.
 
 ## Deploy APP to Azure
-
+```bash
 az group create --name AzureQuizRG --location westeurope
 
 az appservice plan create --name AzureQuizPlan --resource-group AzureQuizRG --sku F1 --is-linux
@@ -77,4 +80,4 @@ az appservice plan create --name AzureQuizPlan --resource-group AzureQuizRG --sk
 az webapp create --name azurequizapp --resource-group AzureQuizRG --plan AzureQuizPlan --runtime "PYTHON:3.13"
 
 az webapp config set --resource-group AzureQuizRG --name azurequizapp --startup-file "uvicorn app:app --host 0.0.0.0 --port 8000"
-
+```

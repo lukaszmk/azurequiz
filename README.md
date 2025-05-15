@@ -2,7 +2,7 @@
 
 ## ✨ Overview
 
-This Project is designed to uplod an simple quiz app to Azure App Service.
+This Project is designed to upload an simple quiz app to Azure App Service.
 
 ## 🚀 Features
 

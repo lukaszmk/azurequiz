@@ -2,7 +2,7 @@
 
 ## ✨ Overview
 
-This Project is designed to test and imporve your knowlede of Microsoft Azure concepts, services, and best practise
+This Project is designed to uplod an simple quiz app to Azure App Service.
 
 ## 🚀 Features
 

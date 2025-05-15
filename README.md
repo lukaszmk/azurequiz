@@ -76,5 +76,5 @@ az appservice plan create --name AzureQuizPlan --resource-group AzureQuizRG --sk
 
 az webapp create --name azurequizapp --resource-group AzureQuizRG --plan AzureQuizPlan --runtime "PYTHON:3.13"
 
-az webapp config set --resource-group AzureQuizRG --name azurequizapp --startup-file "uvicorn main:app --host 0.0.0.0 --port 8000"
+az webapp config set --resource-group AzureQuizRG --name azurequizapp --startup-file "uvicorn app:app --host 0.0.0.0 --port 8000"
 
